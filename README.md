@@ -6,8 +6,12 @@ This project translates the DTSU666 CHINT Power Meter registers 1 to Huawei DTSU
 The translator was checked with the following systems:
 * SUN2000 6KTL M1
 
-# Building
+# Cloning
+It is important to clone the repository using ``--recurse-submodules`` or call ``git submodules init`` after initial cloning, else Arduino core will not be present.
 
+``git clone --recurse-submodules https://github.com/s-marian/DTSU666_CHINT_to_HUAWEI_translator.git``
+
+# Building
 Project base on the eMODBUS library  https://emodbus.github.io/ in this library i made two small changes :
 in the ModbusServerRTU.cpp added "delay(60)"  	row 192
 in the RTUutils.cpp	added "delay(70)"    // row 223;  
